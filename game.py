@@ -23,7 +23,6 @@ def validate_dataframe(df: pd.DataFrame) -> None:
     
     return None
 
-
 def get_goose(file_name: str) -> str:
     """Returns the name of the player from the csv file where animal = 'goose'
     @param file_name : the name of the csv file to use
@@ -31,8 +30,7 @@ def get_goose(file_name: str) -> str:
     class_df = pd.read_csv(file_name)
     validate_dataframe(class_df)
     player = class_df.loc[class_df['animal'] == 'goose', 'name'].iloc[0]
-    return player
-
+    return player  
 
 def run_game() -> None:
     """Main routine for the duck duck goose game."""    
